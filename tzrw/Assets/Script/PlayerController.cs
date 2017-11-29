@@ -7,6 +7,8 @@ public class PlayerController : NetworkBehaviour {
 	public GameObject bulletPrefab;//添加public变量bulletPrefab
 	public Transform bulletSpawn;//添加子弹local发射点
 	// Use this for initialization
+	//音乐文件
+//	public AudioSource music;
 
 	public float speed = 1;  
 
@@ -65,6 +67,8 @@ public class PlayerController : NetworkBehaviour {
 		if (Input.GetMouseButtonDown(0)) {//左
 			print ("发射子弹");
 			CmdFire(); 
+			//播放音乐
+//			music.Play();
 		}
 		if (Input.GetMouseButtonDown(1)) {//右
 			print ("1");
