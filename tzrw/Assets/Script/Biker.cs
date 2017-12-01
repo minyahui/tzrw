@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Biker : MonoBehaviour {
 	private Animator anim;
+	private int speedID = Animator.StringToHash("Vertical");
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -13,7 +14,7 @@ public class Biker : MonoBehaviour {
 	void Update () {
 		
 		float v = Input.GetAxisRaw ("Vertical");
-		anim.SetInteger ("Vertical", (int)v);
+		anim.SetFloat (speedID, v);
 //		transform.Translate (Vector3.forward * v * Time.deltaTime * 4);
 	}
 }
